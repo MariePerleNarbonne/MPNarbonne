@@ -1,1 +1,43 @@
-/*# sourceMappingURL=Nav.css.map */
+.navPrinc-ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.navPrinc-ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--noir);
+    font-family: var(--font);
+    font-size: 1.5rem;
+}
+.navPrinc-ul li a{
+    text-decoration: none;
+    color: var(--noir);
+}
+.navPrinc-ul li:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 5px;
+    background-color: var(--vert);
+    transition: all 0.5s;
+    position: absolute;
+    bottom: 40%;
+}
+.navPrinc-ul li.currentLink::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 5px;
+    background-color: var(--vert);
+    transition: all 0.5s;
+    position: absolute;
+    bottom: 40%;
+}
