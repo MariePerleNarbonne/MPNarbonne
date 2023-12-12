@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Layout from "./Layout"
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
+import LesProjets from "./Pages/LesProjets";
+import UnProjet from "./Pages/UnProjet";
+import Contact from "./Pages/Contact";
+import QuiEstMP from "./Pages/QuiEstMP";
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const App = () => {
+  //Création des routes pour naviguer dans le site.
+  //Pour chaque route, on crée un objet. ({path, element})
+  const routes = [
+    {
+      path: "",
+      element: <Layout />,
+      children: [
+        {
+          index: true, //Affiche la composante par défaut dans le Outlet.
+          element: <Navigate to={"/"} replace />
+        },
+        {
+          path: "/",
+          element: <Accueil />
+        },
+        {
+          path: "bio",
+          element: <QuiEstMPEstMp />
+        },
+        {
+          path: "projets",
+          element: <LesProjets />,
+          children: [
+            {
+              path: "projets/:id",
+              element: <UnProjet />
+            }
+          ]
+        },
+        {
+          path: "contact",
+          element: <Contact />
+        },
+      ]
+    },
+    {
+      path: "*",
+      //si on écrit quelque chose qui n'exsiste pas, renvoyé à about.
+      //replace permet de ne pas garder en historique les routes érronées
+      element: <Navigate to="/" replace />
+    }];
 
-export default App
+  //On retourne le routerProvider pour changer de route en route
+  return <RouterProvider router={createBrowserRouter(routes)} />;
+};
+
+export default App;
