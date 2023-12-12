@@ -1,9 +1,10 @@
-import Layout from "./Layout"
 import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import LesProjets from "./Pages/LesProjets";
 import UnProjet from "./Pages/UnProjet";
 import Contact from "./Pages/Contact";
 import QuiEstMP from "./Pages/QuiEstMP";
+import Accueil from "./Pages/Accueil";
+import Layout from "./Components/Layout";
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
         },
         {
           path: "bio",
-          element: <QuiEstMPEstMp />
+          element: <QuiEstMP />
         },
         {
           path: "projets",
