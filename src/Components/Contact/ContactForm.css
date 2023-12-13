@@ -1,0 +1,29 @@
+.contactForm-container{
+    background-color: transparent;
+}
+
+.contactForm-container .contactForm-titre{
+    background-color: transparent;
+    position: relative;
+    z-index: 100;
+    color: var(--vert);
+    font-family: var(--texte);
+    font-size: 5em;
+    text-align: center;
+}
+
+.contactForm-container .cercles-container{
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.contactForm-container .cercles-container .cercles{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-top: -20%;
+}
