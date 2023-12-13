@@ -1,9 +1,10 @@
 import './Projets.css';
-const Projets = ({nomProj}) => {
+const Projets = ({nomProj ,mouseOver}) => {
+
 
     return (
-      <section className="show-projet">
-        <h2 className="nomProj">{nomProj}</h2>
+      <section className="show-projet" onMouseOver={mouseOver}>
+        <h2 className="nomProj" onMouseOver={mouseOver}>{nomProj}</h2>
       </section>
     )
   };

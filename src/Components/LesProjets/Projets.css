@@ -1,25 +1,49 @@
 .show-projet{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;                                                   
+    height: 1080px;
+    position: relative;
+    transition: all 0.25s;
 }
 .show-projet:hover{
     background-color: var(--vertSemi);
 }
 
+.show-projet:hover .nomProj{
+    font-weight: 900;
+}
+
+.lesProjets-container:has(.show-projet:hover) .show-projet:not(:hover) .nomProj{
+    color: transparent !important;
+    transition: all 0.25s;
+}
+
 .show-projet .nomProj{
     width: 100%;
 
-    /* position: absolute;
-    bottom: 8em;
-    left: 0; */
-
+    position: absolute;
+    bottom: 35%;
+    left: 0%;
+    
     color: var(--noir);
     font-family: var(--texte);
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 500;
-    transform: rotate(-90deg);
-    text-align: left;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    @media only screen and (min-width: 768px) {
+        text-align: left;
+        font-size: 4em;
+        bottom: 10%;
+        transform: rotate(-90deg);
+    }
+    @media only screen and (min-width: 1200px) {
+        bottom: 15%;
+    }
+    @media only screen and (min-width: 1600px) {
+        bottom: 20%;
+    }
+    @media only screen and (min-width: 2000px) {
+        bottom: 25%;
+    }
 }
