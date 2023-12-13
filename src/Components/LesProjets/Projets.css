@@ -1,9 +1,7 @@
 .show-projet{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;                                                   
+    height: 1080px;
+    position: relative;
 }
 .show-projet:hover{
     background-color: var(--vertSemi);
@@ -12,14 +10,19 @@
 .show-projet .nomProj{
     width: 100%;
 
-    /* position: absolute;
-    bottom: 8em;
-    left: 0; */
-
+    position: absolute;
+    bottom: 50%;
+    left: 25%;
+    
     color: var(--noir);
     font-family: var(--texte);
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 500;
-    transform: rotate(-90deg);
     text-align: left;
+    cursor: pointer;
+    @media only screen and (min-width: 768px) {
+        font-size: 4em;
+        bottom: 2em;
+        transform: rotate(-90deg);
+    }
 }
