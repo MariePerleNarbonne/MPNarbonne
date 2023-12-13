@@ -1,0 +1,25 @@
+.show-projet{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;                                                   
+}
+.show-projet:hover{
+    background-color: var(--vertSemi);
+}
+
+.show-projet .nomProj{
+    width: 100%;
+
+    /* position: absolute;
+    bottom: 8em;
+    left: 0; */
+
+    color: var(--noir);
+    font-family: var(--texte);
+    font-size: 4em;
+    font-weight: 500;
+    transform: rotate(-90deg);
+    text-align: left;
+}

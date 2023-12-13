@@ -1,0 +1,21 @@
+.headerApp{
+    width: 100%;
+    background-color: var(--noir);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.headerApp .header-titre{
+    color: var(--blanc);
+    font-family: var(--texte);
+    font-size: 5em;
+    font-weight: 500;
+    margin-left: 25px;
+}
