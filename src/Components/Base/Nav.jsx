@@ -1,6 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import "./Nav.css";
+import { BsEnvelopeHeart } from "react-icons/bs";
+import { RiAccountPinCircleLine } from "react-icons/ri";
+import { GoProjectSymlink } from "react-icons/go";
 
 const Nav = () => {
   const location = useLocation();
@@ -11,17 +14,32 @@ const Nav = () => {
     setActiveLink(location.pathname);
   }, [location.pathname]);
 
+  const [width, setWidth] = useState(window.innerWidth);
+  // console.log(width);
+
+  const updateSize = () => {
+      setWidth(window.innerWidth);
+  };
+
+  window.addEventListener("resize", updateSize);
+  const sizeIcone = 40;
   return (
     <nav className="navPrinc">
       <ul className="navPrinc-ul">
         <li className={`bio ${activeLink === '/bio' ? 'currentLink' : ''}`}>
-          <Link to={"/bio"}>Qui est MP ?</Link>
+          <Link to={"/bio"}>
+            {width >= 768 ? "Qui est MP ?" : <RiAccountPinCircleLine size={sizeIcone}/>}
+          </Link>
         </li>
         <li className={`projets ${activeLink === '/projets' ? 'currentLink' : ''}`}>
-          <Link to={"/projets"}>Projets</Link>
+          <Link to={"/projets"}>
+            {width >= 768 ? "Projets" : <GoProjectSymlink size={sizeIcone}/>}
+          </Link>
         </li>
         <li className={`contact ${activeLink === '/contact' ? 'currentLink' : ''}`}>
-          <Link to={"/contact"}>Contact</Link>
+          <Link to={"/contact"}>
+            {width >= 768 ? "Contact" : <BsEnvelopeHeart size={sizeIcone}/>}
+          </Link>
         </li>
       </ul>
     </nav>

@@ -13,7 +13,7 @@
 .navPrinc-ul li{
     position: relative;
     list-style: none;
-    margin: 10px;
+    margin-inline: 1em;
     text-decoration: none;
     color: var(--blanc);
     font-family: var(--texte);
@@ -22,11 +22,20 @@
 .navPrinc-ul li a{
     text-decoration: none;
     color: var(--blanc);
+    transition: all 0.5s;
 }
+@media only screen and (max-width: 768px) {
+.navPrinc-ul li:hover a,
+.navPrinc-ul li.currentLink a{
+        color: var(--vert);
+        transition: all 0.5s;
+    }
+}
+@media only screen and (min-width: 768px) {
 .navPrinc-ul li:hover::after,
 .navPrinc-ul li.currentLink::after{
-    content: '';
     display: block;
+    content: '';
     width: 110%;
     height: 3px;
     margin-top: 5px;
@@ -35,4 +44,6 @@
     position: absolute;
     bottom: 40%;
     left: -6%;
+    transition: all 0.5s;
+    }
 }
