@@ -1,3 +1,7 @@
+.navPrinc{
+    margin-left: 20px;
+}
+
 .navPrinc-ul{
     display: flex;
     justify-content: right;
@@ -11,33 +15,24 @@
     list-style: none;
     margin: 10px;
     text-decoration: none;
-    color: var(--noir);
-    font-family: var(--font);
+    color: var(--blanc);
+    font-family: var(--texte);
     font-size: 1.5rem;
 }
 .navPrinc-ul li a{
     text-decoration: none;
-    color: var(--noir);
+    color: var(--blanc);
 }
-.navPrinc-ul li:hover::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    margin-top: 5px;
-    background-color: var(--vert);
-    transition: all 0.5s;
-    position: absolute;
-    bottom: 40%;
-}
+.navPrinc-ul li:hover::after,
 .navPrinc-ul li.currentLink::after{
     content: '';
     display: block;
-    width: 100%;
+    width: 110%;
     height: 3px;
     margin-top: 5px;
     background-color: var(--vert);
     transition: all 0.5s;
     position: absolute;
     bottom: 40%;
+    left: -6%;
 }

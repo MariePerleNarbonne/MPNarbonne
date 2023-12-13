@@ -2,7 +2,7 @@ const Accueil = () => {
 
     return (
       <>
-  
+        
       </>
     )
   };
