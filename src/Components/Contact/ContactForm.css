@@ -1,29 +1,65 @@
 .contactForm-container{
-    background-color: transparent;
+    background-color: var(--vert);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -1em;
 }
 
 .contactForm-container .contactForm-titre{
-    background-color: transparent;
+    background-color: transparent !important;
     position: relative;
     z-index: 100;
-    color: var(--vert);
+    color: var(--blanc);
     font-family: var(--texte);
     font-size: 5em;
     text-align: center;
+    margin-top: -1em;
 }
 
-.contactForm-container .cercles-container{
-    /* width: 100%;
-    height: 100%; */
+.contactForm-container .cercles{
+    position: absolute;
+    top: -13.5em;
+    left: -2.5em;
+    width: 126vw;
+    height: 115%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.message-merci{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    /* overflow: hidden; */
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5em 
 }
 
-.contactForm-container .cercles-container .cercles{
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin-top: -20%;
+.message-merci p{
+    font-family: var(--texte);
+    font-size: 1.3em;
+    color: var(--noir);
+    text-align: center;
+    margin: 1em;
+}
+
+.form-icone{
+    transition: all 0.25s;
+    transform: translateY(0em);
+}
+
+.form-icone:hover{
+    transform: translateY(1em);
+    transition: all 0.25s;
 }
