@@ -1,65 +1,137 @@
-.contactForm-container{
+/* @media only screen and (min-width: 387px) {
+
+} */
+.contactForm-container {
     background-color: var(--vert);
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
     width: 100%;
-    margin-top: -1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url(./imgs/cercles.svg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: calc(0% + 80px);
+    padding-top: 40px;
+    padding-bottom: 6em;
+    
+    @media only screen and (min-width: 412px) {
+        background-position-y: calc(0% + 20px);
+        padding-bottom: 8em;
+    }
+    @media only screen and (min-width: 480px) {
+        padding-bottom: 10em;
+    }
+    @media only screen and (min-width: 560px) {
+        padding-bottom: 12em;
+    }
+    @media only screen and (min-width: 620px) {
+        padding-bottom: 15em;
+    }
+    @media only screen and (min-width: 768px) {
+        padding-top: 30px;
+        padding-bottom: 18em;
+    }
+    @media only screen and (min-width: 860px) {
+        padding-bottom: 22em;
+    }
+    @media only screen and (min-width: 1090px) {
+        padding-bottom: 28em;
+    }
+    @media only screen and (min-width: 1200px) {
+        padding-bottom: 35em;
+    }
+    @media only screen and (min-width: 1500px) {
+        padding-bottom: 40em;
+    }
 }
 
-.contactForm-container .contactForm-titre{
-    background-color: transparent !important;
+.contactForm-container .contactForm-titre {
     position: relative;
     z-index: 100;
     color: var(--blanc);
     font-family: var(--texte);
     font-size: 5em;
     text-align: center;
-    margin-top: -1em;
+    @media only screen and (min-width: 480px) {
+        font-size: 7em;
+    }
+    @media only screen and (min-width: 700px) {
+        font-size: 9em;
+    }
+    @media only screen and (min-width: 900px) {
+        font-size: 11em;
+    }
+    @media only screen and (min-width: 1400px) {
+        font-size: 13em;
+    }
 }
 
-.contactForm-container .cercles{
-    position: absolute;
-    top: -13.5em;
-    left: -2.5em;
-    width: 126vw;
-    height: 115%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.message-merci{
+.message-merci {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 1.5em 
+    margin-top: 10%;
+    @media only screen and (min-width: 480px) {
+        margin-top: 0;
+    }
+    @media only screen and (min-width: 540px) {
+        margin-top: 5%;
+    }
+    @media only screen and (min-width: 600px) {
+        margin-top: 7%;
+    }
+    @media only screen and (min-width: 650px) {
+        margin-top: 10%;
+    }
+    @media only screen and (min-width: 750px) {
+        margin-top: 12%;
+    }
+    @media only screen and (min-width: 800px) {
+        margin-top: 15%;
+    }
+    @media only screen and (min-width: 1200px) {
+        margin-top: 20%;
+    }
+
 }
 
-.message-merci p{
+.message-merci p {
     font-family: var(--texte);
-    font-size: 1.3em;
+    font-size: 1em;
     color: var(--noir);
     text-align: center;
     margin: 1em;
+    width: 70%;
+    @media only screen and (min-width: 480px) {
+        font-size: 1.3em;
+    }
+    @media only screen and (min-width: 670px) {
+        font-size: 1.5em;
+    }
+    @media only screen and (min-width: 900px) {
+        font-size: 2em;
+    }
+    @media only screen and (min-width: 1500px) {
+        font-size: 2.5em;
+    }
 }
+/* @media only screen and (min-width: 1020px) {
+
+} */
 
 .form-icone{
+    margin-top: 1em;
     transition: all 0.25s;
     transform: translateY(0em);
 }
 
 .form-icone:hover{
-    transform: translateY(1em);
+    transform: translateY(3em);
     transition: all 0.25s;
 }

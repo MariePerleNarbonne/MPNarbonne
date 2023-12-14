@@ -1,18 +1,50 @@
 .contactMerci-container{
     width: 100%;
-    height: 40vh;
+    height: 100%;
     background-color: var(--vert);
     overflow: hidden;
+    @media only screen and (min-width: 387px) {
+        padding-top: 1.5em;
+    }
+    @media only screen and (min-width: 500px) {
+        padding-top: 1.5em;
+    }
+    @media only screen and (min-width: 750px) {
+        padding-bottom: 2.5em;
+    }
+
+}
+.merci-infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contactMerci-container .merci-email{
     font-family: var(--texte);
     font-size: 1.5em;
     color: var(--blanc);
+    background-color: var(--noir);
     text-align: center;
     margin: 1em;
+    padding: 0.5em;
     text-transform: uppercase;
     font-weight: bold;
+    @media only screen and (min-width: 500px) {
+        margin-bottom: 1em;
+        font-size: 2em;
+        width: 90%;
+    }
+    @media only screen and (min-width: 670px) {
+        font-size: 2em;
+    }
+    @media only screen and (min-width: 900px) {
+        font-size: 3em;
+    }
+    @media only screen and (min-width: 1500px) {
+        font-size: 3.5em;
+    }
 }
 
 .merci-icones{
@@ -22,19 +54,36 @@
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    margin: 0.3em 0 0 0;
+    margin: 0.5em 0 0 0;
+    padding: 0.5em 1em 1em 1em;
+    /* @media only screen and (min-width: 500px) {
+        margin: 1.5em 1em;
+    } */
+    /* @media only screen and (min-width: 750px) {
+        padding: 1.5em;
+    } */
 }
 
 .merci-icones p{
     margin-inline: 0.5em;
     transition: all 0.25s;
-    transform: translateY(0em);
+    transform: translateY(0em) scale(1);
     box-shadow: 0px 0px;
+    margin-inline: 0.5em;
+    @media only screen and (min-width: 500px) {
+        margin-inline: 0.3em;
+    }
+    @media only screen and (min-width: 750px) {
+        padding: 0.5em;
+    }
 }
 
 .merci-icones p:hover{
-    transform: translateY(-0.25em);
+    transform: translateY(-0.5em) scale(1.1);
     transition: all 0.25s;
+    @media only screen and (min-width: 750px) {
+        transform: translateY(-1em) scale(1.2);
+    }
 }
 
 .merci-icones p a{
@@ -45,16 +94,26 @@
 
 .merci-signature{
     position: relative;
+    top: -1.5em;
+    @media only screen and (min-width: 768px) {
+        top: 2em;
+    }
 }
 
-.merci-signature p{
+.merci-signature p {
     font-family: var(--logo);
     font-size: 3em;
     color: var(--noir);
     text-align: right;
-    margin: 1em;
+    margin: 1.5em 1em 1em 1em;
     text-transform: uppercase;
     font-weight: bold;
+    @media only screen and (min-width: 768px) {
+        font-size: 4em;
+    }
+    @media only screen and (min-width: 998px) {
+        font-size: 5em;
+    }
 }
 
 .merci-signature p::after,
@@ -70,8 +129,10 @@
 }
 
 .merci-signature p::before{
-    top: 1em;
+    top: 1.5em;
+
 }
 .merci-signature p::after{
-    top: 1.2em;
+    top: 1.7em;
+
 }
