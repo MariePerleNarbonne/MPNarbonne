@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 
 import HeaderApp from "./Base/HeaderApp";
+import FooterApp from "./Base/FooterApp";
 
 const Layout = () => {
 
@@ -11,7 +12,7 @@ const Layout = () => {
       <main>       
         <HeaderApp />
         <Outlet />
-        {/* <Footer /> */}
+        <FooterApp />
       </main>
     </div>
   );
