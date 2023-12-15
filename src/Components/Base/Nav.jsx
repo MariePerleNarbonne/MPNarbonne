@@ -22,7 +22,7 @@ const Nav = () => {
   };
 
   window.addEventListener("resize", updateSize);
-  const sizeIcone = 40;
+  const sizeIcone = width <= 392 ? "29" : "40";
   return (
     <nav className="navPrinc">
       <ul className="navPrinc-ul">

@@ -1,0 +1,100 @@
+.footerApp{
+    background-color: var(--noir);
+    color: var(--blanc);
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.footerApp::before,
+.footerApp::after{
+    content: "";
+    display: block;
+    width: 0.3em;
+    height: 40%;
+    background-color: var(--vert);
+    margin-top: 0.5em;
+    position: absolute;
+    bottom: 0;
+}
+
+.footerApp::before{
+    left: 1.5em;
+}
+.footerApp::after{
+    left: 2.3em;
+}
+.footerApp .footer-titre{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1em;
+    position: relative;
+}
+
+.footerApp .footer-titre::before,
+.footerApp .footer-titre::after{
+    content: "";
+    display: block;
+    width: 40%;
+    height: 0.3em;
+    background-color: var(--vert);
+    margin-top: 0.5em;
+    position: absolute;
+    right: 0;
+}
+
+.footerApp .footer-titre::before{
+    top: 4.2em;
+}
+.footerApp .footer-titre::after{
+    top: 5em;
+}
+
+.footerApp .footer-titre h1{
+    font-family: var(--logo);
+    font-size: 7em;
+    font-weight: 500;
+}
+
+.footerApp .footer-titre .footer-carriere{
+    font-family: var(--texte);
+    font-size: 1em;
+}
+
+.footerApp .footer-lien{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    margin: 2em 1em;
+    width: 100%;
+}
+
+.footerApp .footer-lien a{
+    text-decoration: none;
+    color: var(--blanc);
+    font-family: var(--texte);
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.footerApp .footer-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footerApp .footer-socials a{
+    text-decoration: none;
+    color: var(--blanc);
+    margin: 0.5em;
+    transform: translateY(0em) scale(1);
+    transition: all 0.25s;
+}
+.footerApp .footer-socials a:hover{
+    transform: translateY(-0.5em) scale(1.1);
+    transition: all 0.25s;
+}

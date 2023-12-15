@@ -10,7 +10,8 @@
     
     position: fixed;
     bottom: 0;
-    z-index: 100;
+    z-index: 10000;
+    /* Mettre: max-height:60vh; quand le footer va etre la pour max le sticky et fixed */
 }
 @media only screen and (min-width: 768px) {
     .headerApp{
@@ -21,7 +22,6 @@
 
 .headerApp .header-titre-lien{
     text-decoration: none;
-
 }
 
 .headerApp .header-titre{
@@ -33,5 +33,5 @@
 }
 
 .header-titre-lien .icone{
-  color: var(--vert);
+  color: var(--blanc);
 }
