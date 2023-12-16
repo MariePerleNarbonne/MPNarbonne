@@ -69,7 +69,6 @@
     flex-direction: column;
     padding: 1em;
     margin: 2em 1em;
-    width: 100%;
 }
 
 .footerApp .footer-lien a{
@@ -78,6 +77,13 @@
     font-family: var(--texte);
     font-size: 2em;
     margin: 0.5em;
+    transition: all 0.25s;
+}
+
+.footerApp .footer-lien a:hover{
+    color: var(--vert);
+    transition: all 0.25s;
+
 }
 
 .footerApp .footer-socials{

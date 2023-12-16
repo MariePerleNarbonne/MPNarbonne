@@ -1,30 +1,88 @@
-import './FooterApp.css';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPinterestSquare } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
 import { AiOutlineDribbbleSquare } from "react-icons/ai";
+import './FooterApp.css';
+import { useState } from 'react';
 
 const FooterApp = () => {
+  const velocity = 50;
 
-    return (
-      <footer className="footerApp">
-        <div className="footer-titre">
-            <h1 className='footer-mp'>MP</h1>
-            <p className="footer-carriere">Designer / Développeuse Web Front End</p>
-        </div>
-        <div className="footer-lien">
-            <Link>Accueil</Link>
-            <Link>Qui est MP ?</Link>
-            <Link>Projets</Link>
-            <Link>Contact</Link>
-        </div>
-        <div className="footer-socials">
-            <Link><GrLinkedin size={"40"}/></Link>
-            <Link><AiOutlineDribbbleSquare size={"52"}/></Link>
-            <Link><FaPinterestSquare size={"45"} /></Link>
-        </div>
-      </footer>
-    )
+  const shuffle = (o) => {
+    for (let j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
   };
-  
-  export default FooterApp;
+
+  const shuffleText = (element, originalText) => {
+    const elementTextArray = [];
+    let randomText = [];
+
+    for (let i = 0; i < originalText.length; i++) {
+      elementTextArray.push(originalText.charAt(i));
+    }
+
+    const repeatShuffle = (times, index) => {
+      if (index === times) {
+        element.innerText = originalText;
+        return;
+      }
+
+      setTimeout(() => {
+        randomText = shuffle(elementTextArray);
+        for (let i = 0; i < index; i++) {
+          randomText[i] = originalText[i];
+        }
+        randomText = randomText.join('');
+        element.innerText = randomText;
+        index++;
+        repeatShuffle(times, index);
+      }, velocity);
+    };
+
+    repeatShuffle(element.innerText.length, 0);
+  };
+
+  useEffect(() => {
+    const footerLinks = document.querySelectorAll('.footer-lien a');
+
+    footerLinks.forEach((link) => {
+      link.addEventListener('mouseenter', () => {
+        shuffleText(link, link.innerText);
+      });
+    });
+  }, []);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const updateSize = () => {
+      setWidth(window.innerWidth);
+  };
+
+  window.addEventListener("resize", updateSize);
+  const sizeLinked = width >= 998 ? "50" : "40";
+  const sizeDrib = width >= 998 ? "62" : "52";
+  const sizePin = width >= 998 ? "55" : "45";
+
+  return (
+    <footer className="footerApp">
+      <div className="footer-titre">
+        <h1 className='footer-mp'>MP</h1>
+        <p className="footer-carriere">Designer / Développeuse Web Front End</p>
+      </div>
+      <div className="footer-lien">
+        <Link>Accueil</Link>
+        <Link>Qui est MP ?</Link>
+        <Link>Projets</Link>
+        <Link>Contact</Link>
+      </div>
+      <div className="footer-socials">
+        <Link><GrLinkedin size={sizeLinked} /></Link>
+        <Link><AiOutlineDribbbleSquare size={sizeDrib} /></Link>
+        <Link><FaPinterestSquare size={sizePin} /></Link>
+      </div>
+    </footer>
+  );
+};
+
+export default FooterApp;
