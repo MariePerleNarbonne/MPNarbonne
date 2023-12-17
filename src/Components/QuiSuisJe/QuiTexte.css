@@ -1,0 +1,35 @@
+.quiTexte-container{
+    margin-top: -35%;
+    font-family: var(--texte);
+    color: var(--noir);
+    @media screen and (min-width: 490px) {
+        margin-top: -25%;   
+    }
+    @media screen and (min-width: 650px) {
+        margin-top: -15%;   
+    }
+    @media screen and (min-width: 998px) {
+        margin-top: -5%;   
+    }
+    @media screen and (min-width: 1400px) {
+        margin-top: 5%;   
+    }
+}
+
+.quiTexte-p{
+    font-size: 16px;
+    text-align: left;
+    margin: 5%;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.quiTexte-img{
+    width: 68%;
+    max-width: 761px;
+    height: 28%;
+    max-height: 532px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 5%;
+}
