@@ -17,6 +17,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding-top: 1em;
 }
 
 .contactMerci-container .merci-email{
@@ -29,6 +31,7 @@
     padding: 0.5em;
     text-transform: uppercase;
     font-weight: bold;
+    /* position: relative; */
     @media only screen and (min-width: 500px) {
         margin-bottom: 1em;
         font-size: 2em;
@@ -142,4 +145,20 @@
     display: block;
     padding: 0.5em;
     border-radius: 50%;
+}
+
+.tooltip-email{
+    position: absolute;
+    background-color: var(--mauve);
+    color: var(--blanc);
+    padding: 5px;
+    border-radius: 4px;
+    top: 0.7em; /* Adjust the positioning as needed */
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    font-size: 12px;
+    @media only screen and (min-width: 1200px) {
+        font-size: 18px;
+    } 
 }
