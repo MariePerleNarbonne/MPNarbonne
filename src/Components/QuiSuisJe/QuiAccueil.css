@@ -1,30 +1,68 @@
-.quiAccueil-container{
+.quiAccueil-container {
+    overflow: hidden !important;
     width: 100%;
     height: 100%;
     padding: 1em 0;
     font-family: var(--texte);
     position: relative;
+
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
+    
+    @media screen and (min-width: 998px) {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+    }
 }
 
 .quiAccueil-container::before,
-.quiAccueil-container::after{
+.quiAccueil-container::after {
     content: "";
     position: absolute;
     top: 0;
-    left: 0.5em;
-    width: 8px;
-    height: 200px;
+    left: 0em;
+    width: 10px;
+    height: 137px;
     background-color: var(--vert);
     z-index: -1;
 }
-.quiAccueil-container::after{
-    left: 1.5em;
+
+@media screen and (min-width: 768px) {
+    .quiAccueil-container::before,
+    .quiAccueil-container::after {
+        height: 210px !important;
+
+    }
+}
+@media screen and (min-width: 998px) {
+    .quiAccueil-container::before,
+    .quiAccueil-container::after {
+        height: 260px !important;
+    
+    }
+}
+@media screen and (min-width: 1200px) {
+    .quiAccueil-container::before,
+    .quiAccueil-container::after {
+        height: 310px !important;
+        width: 15px;
+    }
 }
 
-.quiAccueil-container .quiAccueil-fond{
+.quiAccueil-container::after {
+    left: 18px;
+
+}
+@media screen and (min-width: 1200px) {
+    .quiAccueil-container::after {
+        left: 28px;
+    
+    }   
+}
+
+.quiAccueil-container .quiAccueil-fond {
     display: block;
     background-color: var(--vert);
     width: 70%;
@@ -33,16 +71,27 @@
     top: 0;
     right: 0;
     z-index: -1;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 
-.quiAccueil-container .quiAccueil-infos{
+.quiAccueil-container .quiAccueil-infos {
     width: 100%;
     grid-area: 1 / 1 / 2 / 3;
+    @media screen and (min-width: 564px) {
+        margin-left: 1.5em;
+    }
+    @media screen and (min-width: 998px) {
+        grid-area: 1 / 1 / 2 / 4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
 }
 
-.quiAccueil-container .quiAccueil-mp{
+.quiAccueil-container .quiAccueil-mp {
     font-family: var(--logo);
     font-size: 10em;
     font-weight: 600;
@@ -51,29 +100,113 @@
     margin-left: 0.2em;
     transform: rotate(-90deg);
     grid-area: 3 / 1 / 4 / 2;
+    justify-self: start;
+    align-self: flex-start;
     width: 100%;
     height: 100%;
-    /* position: absolute;
-    top: 53.5%;
-    left: -35%; */
+    
+    @media screen and (min-width: 489px) {
+        margin-top: -0.1em;
+    }
+    
+    @media screen and (min-width: 564px) {
+        margin-top: -0.25em;
+    }
+    
+    @media screen and (min-width: 662px) {
+        margin-top: -0.35em;
+    }
+    
+    @media screen and (min-width: 768px) {
+        margin-left: 0.5em;
+        margin-top: -0.5em;
+    }
+    @media screen and (min-width: 849px) {
+        margin-top: -0.7em;
+    }
+    @media screen and (min-width: 923px) {
+        margin-top: -0.9em;
+    }
+
+    @media screen and (min-width: 998px) {
+        grid-area: 3 / 1 / 4 / 2; 
+        margin-left: -0.2em;
+        margin-top:  0em;
+        width: min-content;
+        height: min-content;
+        
+    }
+    @media screen and (min-width: 1400px) {
+        font-size: 15em;
+        margin-left: -0.1em;
+        margin-bottom: 0.2em;
+    }
+
 }
 
-.quiAccueil-container .quiAccueil-emploi{
+.quiAccueil-container .quiAccueil-emploi {
     text-transform: uppercase;
     font-size: 16px;
     margin: 0.5em;
     font-weight: 800;
+
+    @media screen and (min-width: 489px) {
+        font-size: 22px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 30px;
+    }
+    @media screen and (min-width: 998px) {
+        font-size: 25px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 1em;
     
+    }
+    @media screen and (min-width: 1400px) {
+        font-size: 30px;
+    }
 }
 
-.quiAccueil-container .quiAccueil-email{
+.quiAccueil-container .quiAccueil-email {
     font-size: 16px;
     font-weight: 600;
     text-transform: lowercase;
     margin: 0.5em;
+    color: var(--mauve);
+    
+    @media screen and (min-width: 489px) {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    @media screen and (min-width: 768px) {
+        font-size: 25px;
+    }
+    @media screen and (min-width: 998px) {
+        margin-right: 1.5em;
+        font-weight: 600;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    @media screen and (min-width: 1400px) {
+        font-size: 30px;
+    }
+}
+.tooltip{
+    position: absolute;
+    background-color: var(--mauve);
+    color: var(--blanc);
+    padding: 5px;
+    border-radius: 4px;
+    top: 70px; /* Adjust the positioning as needed */
+    right: 1em;
+    white-space: nowrap;
+    font-size: 12px;
 }
 
-.quiAccueil-container .quiAccueil-photo{
+.quiAccueil-container .quiAccueil-photo {
     width: 90%;
     height: 90%;
     grid-area: 2 / 1 / 3 / 3;
@@ -81,29 +214,43 @@
     object-fit: contain;
     object-position: center;
     margin: 1.5em auto 2.5em auto;
+    @media screen and (min-width: 998px) {
+        grid-area: 2 / 2 / 4 / 3;
+    }
 }
 
-.quiAccueil-container .quiAccueil-socials{
+.quiAccueil-container .quiAccueil-socials {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     grid-area: 3 / 2 / 4 / 3;
     margin-right: 2em;
-    margin-top: 3em;
+    margin-top: 4em;
+        @media screen and (min-width: 768px) {
+        margin-right: 3em;
+    }
+    @media screen and (min-width: 998px) {
+        grid-area: 2 / 3 / 3 / 4;
+        padding-left: 6em;
+        padding-right: 1em;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-top: 15em;
+    }
 }
 
-.quiAccueil-container .quiAccueil-socials p{
+.quiAccueil-container .quiAccueil-socials p {
     margin: 0.9em 0;
 }
 
-.quiAccueil-container .quiAccueil-socials p a{
+.quiAccueil-container .quiAccueil-socials p a {
     color: var(--blanc);
     text-decoration: none;
 }
 
 
-.quiAccueil-container .quiAccueil-socials .linkedin a{
+.quiAccueil-container .quiAccueil-socials .linkedin a {
     color: var(--vert) !important;
     background-color: var(--blanc);
     text-decoration: none;
@@ -114,7 +261,7 @@
     border-radius: 50%;
 }
 
-.quiAccueil-container .quiAccueil-cv{
+.quiAccueil-container .quiAccueil-cv {
     text-transform: uppercase;
     font-size: 2em;
     text-decoration: none;
@@ -122,31 +269,57 @@
     font-weight: 600;
     margin-top: 2em;
     margin-left: 3.6em;
+        
+    @media screen and (min-width: 998px) {
+        margin-top: 0em;
+        margin-left: 0em;
+    }
+    @media screen and (min-width: 1400px) {
+        font-size: 35px;
+    }
+    
 }
 
-.quiAccueil-cv-container{
+.quiAccueil-cv-container {
     display: block;
     grid-area: 4 / 1 / 5 / 2;
     position: relative;
     width: 100%;
     height: 200px;
     margin-top: 2.5em;
+    
+    @media screen and (min-width: 489px) {
+        margin-top: 5.5em;
+    }
+    @media screen and (min-width: 998px) {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-top: 5em;
+    }
 }
 
-.quiAccueil-container .quiAccueil-cv-barres{
+.quiAccueil-container .quiAccueil-cv-barres {
     display: block;
-    width: 150px;
+    width: 100%;
     height: 5px;
     background-color: var(--noir);
+    @media screen and (min-width: 1200px) {
+        height: 10px;
+    }
 }
 
-.quiAccueil-container .quiAccueil-cv-barres.barre1{
+.quiAccueil-container .quiAccueil-cv-barres.barre1 {
     position: absolute;
     top: 31px;
     left: 0;
 }
-.quiAccueil-container .quiAccueil-cv-barres.barre2{
+
+.quiAccueil-container .quiAccueil-cv-barres.barre2 {
     position: absolute;
     top: 41px;
     left: 0;
+    @media screen and (min-width: 1200px) {
+        top:48px;
+    }
 }
