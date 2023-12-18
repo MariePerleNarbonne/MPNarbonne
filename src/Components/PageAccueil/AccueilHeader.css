@@ -50,8 +50,16 @@
     font-size: 8em;
     font-family: var(--logo);
     position: absolute;
-    bottom: -10%;
+    bottom: -40%;
     left: 5%;
+
+    @media screen and (min-width: 430px) {
+        bottom: -30%;
+    }
+
+    @media screen and (min-width: 768px) {
+        bottom: -20%;
+    }
 
     @media screen and (min-width: 998px) {
         left: 10%;

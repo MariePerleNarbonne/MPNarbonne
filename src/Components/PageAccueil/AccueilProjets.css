@@ -1,0 +1,64 @@
+.accueilProjets-imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+.accueilProjets-imgsWrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil-img2,
+.accueil-img3,
+.accueil-img1 {
+    width: 80%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background-position: center;
+    margin-top: 3em;
+    /* @media (min-width: 768px) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } */
+}
+
+.accueil-img2 {
+    @media (min-width: 768px) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+}
+
+.accueil-img2-span {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: block;
+    width: 80%;
+    aspect-ratio: 1/1;
+    border: 3px solid var(--mauve);
+    z-index: -1;
+}
+
+.accueil-img3 {
+    @media (min-width: 768px) {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+}
+
+.accueil-img1 {
+    @media (min-width: 768px) {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+}
+
