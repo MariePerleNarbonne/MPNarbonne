@@ -81,7 +81,7 @@
     background-color: var(--mauve);
     margin-top: 0.5em;
     position: absolute;
-    bottom: 0;
+    bottom: 8em;
     right: 0.5em;
     z-index: 2;
 }

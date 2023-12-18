@@ -1,11 +1,21 @@
 import {Link} from 'react-router-dom';
 import './AccueilProjets.css';
+import { HiArrowLongRight } from "react-icons/hi2";
 
 const AccueilProjets = () => {
   return (
     <section className="accueilProjet-container">
-      <Link className="accueilProjets-btn">Voir les projets </Link>
-      <span className="accueilProjets-barres"></span>
+      <div className="accueilProjets-btnWrap">
+        <div className="wraptext-btn">
+          <Link className="accueilProjets-btn">
+            Voir les projets 
+          <span>
+            <HiArrowLongRight size="45"/>
+          </span>
+          </Link>
+        </div>
+        <span className="accueilProjets-barres"></span>
+      </div>
       <div className="accueilProjets-imgContainer">
         <div className="accueilProjets-imgsWrap">
           <img className="accueilProjets-img accueil-img2" src="/imgs/groovyBeats/Page-Accueil.png" alt="image d'un projet"/>
