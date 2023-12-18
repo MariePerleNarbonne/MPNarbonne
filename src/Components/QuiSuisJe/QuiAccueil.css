@@ -195,15 +195,21 @@
     }
 }
 .tooltip{
+    width: 40%;
     position: absolute;
     background-color: var(--mauve);
     color: var(--blanc);
     padding: 5px;
     border-radius: 4px;
-    top: 70px; /* Adjust the positioning as needed */
-    right: 1em;
+    top: 7%; /* Adjust the positioning as needed */
+    left: 1em;
     white-space: nowrap;
     font-size: 12px;
+    text-align: center;
+    @media screen and (min-width: 1400px) {
+        width: 10%;
+        left: 88%;
+    }
 }
 
 .quiAccueil-container .quiAccueil-photo {
@@ -242,6 +248,12 @@
 
 .quiAccueil-container .quiAccueil-socials p {
     margin: 0.9em 0;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+.quiAccueil-container .quiAccueil-socials p:hover{
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out;
 }
 
 .quiAccueil-container .quiAccueil-socials p a {
@@ -304,9 +316,23 @@
     width: 100%;
     height: 5px;
     background-color: var(--noir);
+    transition: 0.3s ease-in-out;
     @media screen and (min-width: 1200px) {
         height: 10px;
     }
+}
+.quiAccueil-cv{
+    color: var(--noir);
+    transition: 0.3s ease-in-out;
+}
+.quiAccueil-cv:hover{
+    color: var(--mauve);
+    transition: 0.3s ease-in-out;
+}
+
+.quiAccueil-container:has(.quiAccueil-cv:hover) .quiAccueil-cv-barres{
+    background-color: var(--mauve);
+    transition: 0.3s ease-in-out;
 }
 
 .quiAccueil-container .quiAccueil-cv-barres.barre1 {

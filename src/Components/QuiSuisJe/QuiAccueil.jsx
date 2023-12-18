@@ -90,6 +90,15 @@ const QuiAccueil = () => {
     };
   }, []);
 
+    const handleDownload = () => {
+      // Logique de téléchargement du fichier PDF
+      const pdfUrl = '/public/MP-Narbonne_CV.pdf';
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'MP-Narbonne_CV.pdf';
+      link.click();
+    };
+
   return (
     <section className="quiAccueil-container">
       <span className="quiAccueil-fond"></span>
@@ -116,7 +125,7 @@ const QuiAccueil = () => {
         <p className='pinterest merci-i'><Link to="https://dribbble.com/MP-Narbonne"><FaPinterest size={width >= 750 ? "70" : "60"}/></Link></p>
       </div>
       <div className="quiAccueil-cv-container">
-        <Link className="quiAccueil-cv">cv</Link>
+        <Link className="quiAccueil-cv" onClick={handleDownload}>cv</Link>
         <span className="quiAccueil-cv-barres barre1"></span>
         <span className="quiAccueil-cv-barres barre2"></span>
       </div>
