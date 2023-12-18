@@ -17,6 +17,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding-top: 1em;
 }
 
 .contactMerci-container .merci-email{
@@ -29,6 +31,7 @@
     padding: 0.5em;
     text-transform: uppercase;
     font-weight: bold;
+    /* position: relative; */
     @media only screen and (min-width: 500px) {
         margin-bottom: 1em;
         font-size: 2em;
@@ -53,13 +56,12 @@
     width: 100%;
     overflow: hidden;
     margin: 0.5em 0 0 0;
-    padding: 0.5em 1em 1em 1em;
-    /* @media only screen and (min-width: 500px) {
-        margin: 1.5em 1em;
-    } */
-    /* @media only screen and (min-width: 750px) {
+    padding: 0.5em 1.5em 1em 1.5em;
+    @media only screen and (min-width: 750px) {
         padding: 1.5em;
-    } */
+    }
+
+
 }
 
 .merci-icones p{
@@ -67,9 +69,9 @@
     transition: all 0.25s;
     transform: translateY(0em) scale(1);
     box-shadow: 0px 0px;
-    margin-inline: 0.5em;
+    overflow: hidden;
     @media only screen and (min-width: 500px) {
-        margin-inline: 0.3em;
+        margin-inline: 0.8em;
     }
     @media only screen and (min-width: 750px) {
         padding: 0.5em;
@@ -77,17 +79,16 @@
 }
 
 .merci-icones p:hover{
-    transform: translateY(-0.5em) scale(1.1);
+    transform: translateY(-0.4em) scale(1.1);
     transition: all 0.25s;
     @media only screen and (min-width: 750px) {
         transform: translateY(-1em) scale(1.2);
     }
 }
 
-.merci-icones p a{
+.merci-icones p a:not(.linkedin){
     text-decoration: none;
     color: var(--noir);
-
 }
 
 .merci-signature{
@@ -133,4 +134,31 @@
 .merci-signature p::after{
     top: 1.7em;
 
+}
+
+.contactMerci-container .merci-infos .merci-icones .linkedin a{
+    color: var(--vert) !important;
+    background-color: var(--noir);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0.5em;
+    border-radius: 50%;
+}
+
+.tooltip-email{
+    position: absolute;
+    background-color: var(--mauve);
+    color: var(--blanc);
+    padding: 5px;
+    border-radius: 4px;
+    top: 0.7em; /* Adjust the positioning as needed */
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    font-size: 12px;
+    @media only screen and (min-width: 1200px) {
+        font-size: 18px;
+    } 
 }

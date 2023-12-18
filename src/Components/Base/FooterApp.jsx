@@ -77,9 +77,9 @@ const FooterApp = () => {
         <Link>Contact</Link>
       </div>
       <div className="footer-socials">
-        <Link><GrLinkedin size={sizeLinked} /></Link>
-        <Link><AiOutlineDribbbleSquare size={sizeDrib} /></Link>
-        <Link><FaPinterestSquare size={sizePin} /></Link>
+        <Link to="https://www.linkedin.com/in/mp-narbonne/"><GrLinkedin size={sizeLinked} /></Link>
+        <Link to="https://dribbble.com/MP-Narbonne"><AiOutlineDribbbleSquare size={sizeDrib} /></Link>
+        <Link to="https://dribbble.com/MP-Narbonne"><FaPinterestSquare size={sizePin} /></Link>
       </div>
     </footer>
   );
