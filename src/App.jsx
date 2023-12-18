@@ -6,21 +6,15 @@ import QuiEstMP from "./Pages/QuiEstMP";
 import Accueil from "./Pages/Accueil";
 import Layout from "./Components/Layout";
 
-
 const App = () => {
-  //Création des routes pour naviguer dans le site.
-  //Pour chaque route, on crée un objet. ({path, element})
   const routes = [
     {
-      path: "",
+      path: "/",
       element: <Layout />,
       children: [
         {
-          index: true, //Affiche la composante par défaut dans le Outlet.
-          element: <Navigate to={"/"} replace />
-        },
-        {
           path: "/",
+          index: true,
           element: <Accueil />
         },
         {
@@ -45,12 +39,10 @@ const App = () => {
     },
     {
       path: "*",
-      //si on écrit quelque chose qui n'exsiste pas, renvoyé à about.
-      //replace permet de ne pas garder en historique les routes érronées
       element: <Navigate to="/" replace />
-    }];
+    }
+  ];
 
-  //On retourne le routerProvider pour changer de route en route
   return <RouterProvider router={createBrowserRouter(routes)} />;
 };
 
