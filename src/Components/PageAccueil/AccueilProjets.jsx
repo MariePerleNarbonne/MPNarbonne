@@ -6,15 +6,13 @@ const AccueilProjets = () => {
   return (
     <section className="accueilProjet-container">
       <div className="accueilProjets-btnWrap">
+        <span className="accueilProjets-barres"></span>
         <div className="wraptext-btn">
           <Link className="accueilProjets-btn">
             Voir les projets 
-          <span>
             <HiArrowLongRight size="45"/>
-          </span>
           </Link>
         </div>
-        <span className="accueilProjets-barres"></span>
       </div>
       <div className="accueilProjets-imgContainer">
         <div className="accueilProjets-imgsWrap">

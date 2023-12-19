@@ -7,8 +7,8 @@ const Accueil = () => {
     return (
       <section className="pageAccueil-container">
         <AccueilHeader />
-        <AccueilProjets />
         <AccueilMoi />
+        <AccueilProjets />
       </section>
     )
   };
