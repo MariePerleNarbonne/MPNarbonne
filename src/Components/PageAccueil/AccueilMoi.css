@@ -1,24 +1,29 @@
-.accueilMoi-container{
+.accueilMoi-container {
     position: relative;
 
     margin-top: 8em;
 }
 
-.accueilMoi-fond1{
+.accueilMoi-fond1 {
     display: block;
     background-color: var(--mauve);
-    width: 80%;
+    width: 85%;
+
     height: 450px;
 
     position: absolute;
     top: -2.5em;
     z-index: -1;
+
+    @media screen and (min-width: 998px) {
+        top: -5em;
+    }
 }
 
 /* BARRES - HAUT */
 
 .accueilMoi-barres1Verti::before,
-.accueilMoi-barres1Verti::after{
+.accueilMoi-barres1Verti::after {
     content: "";
     display: block;
     width: 0.5em;
@@ -28,14 +33,24 @@
     top: -3.5em;
     left: 0.5em;
     z-index: 2;
+    
 }
 
-.accueilMoi-barres1Verti::after{
+@media screen and (min-width: 998px) {
+    
+    .accueilMoi-barres1Verti::before,
+    .accueilMoi-barres1Verti::after {
+        top: -5.5em;
+        height: 50%;
+    }
+}
+
+.accueilMoi-barres1Verti::after {
     left: 1.4em;
 }
 
 .accueilMoi-barres1Hori::before,
-.accueilMoi-barres1Hori::after{
+.accueilMoi-barres1Hori::after {
     content: "";
     display: block;
     height: 0.5em;
@@ -47,93 +62,129 @@
     z-index: 2;
 }
 
-.accueilMoi-barres1Hori::after{
-    top: -1.1em;
+@media screen and (min-width: 998px) {
+    
+    .accueilMoi-barres1Hori::before,
+    .accueilMoi-barres1Hori::after {
+        top: -4.5em;
+    }
 }
 
-.accueilMoi-btn{
+.accueilMoi-barres1Hori::after {
+    top: -1.1em;
+}
+@media screen and (min-width: 998px) {
+    .accueilMoi-barres1Hori::after {
+        top: -3.6em;
+    }
+}
+
+.accueilMoi-btn {
     display: block;
     width: 100%;
     padding: 0 2em;
-    
+
     font-family: var(--texte);
     font-size: 1.5em;
     text-decoration: none;
     text-align: left;
-    
-    color: var(--noir);
-    
+
+    color: var(--blanc);
+
     transition: all 0.35s;
+
+    @media screen and (min-width: 998px) {
+        font-size: 2em;
+    }
 }
 
-.accueilMoi-btn svg{
+.accueilMoi-btn svg {
     margin-bottom: -0.6em;
     margin-left: 0.3em;
     transition: all 0.2s;
+    @media screen and (min-width: 998px) {
+        margin-bottom: -0.4em;
+    }
 }
-.accueilMoi-btn:hover svg{
-    margin-bottom: -0.6em;
+
+.accueilMoi-btn:hover svg {
     margin-left: 0.8em;
     transition: all 0.2s;
 }
 
-.accueilMoi-btn:hover{
-    color: var(--blanc);
+.accueilMoi-btn:hover {
+    color: var(--noir);
     transition: all 0.35s;
 }
 
 
-.accueilMoi-imgWrap{
+.accueilMoi-imgWrap {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
 }
 
-.accueilMoi-img{
+.accueilMoi-img {
 
-    width: 70%;
+    width: 80%;
     height: 460px;
-    margin: 1.5em 0 3.5em 0;
-    
+    margin: 0em 0 3.5em 0;
+
     object-fit: cover;
     object-position: center;
 
-
+    @media screen and (min-width: 998px) {
+        height: 400px;
+        margin: 0em 0 3.5em 0;
+    }
 }
 
-.accueilMoi-bio{
+.accueilMoi-bio {
     width: 71%;
-    margin: -0.5em 0 2em 1.1em;
+    max-width: 700px;
+    margin: 2em;
 
     font-family: var(--texte);
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
-    
-    color: var(--noir);
+
+    color: var(--blanc);
+
+    @media screen and (min-width: 488px) {
+        width: 65%;
+        margin: 2em 3.5em;
+    }
+
+    @media screen and (min-width: 998px) {
+        font-size: 1.5em;
+    }
 }
 
-.accueilMoi-bio span:not(.points){
+.accueilMoi-bio span:not(.points) {
+    padding-inline: 0.2em 0.4em;
+
     font-weight: 400;
-    color: white;
-    background-color: var(--mauve);
+
+    color: var(--noir);
+    background-color: var(--vert);
 }
 
-.accueilMoi-bio span::selection{
+.accueilMoi-bio span::selection {
     background-color: var(--mauve);
     color: var(--blanc);
 }
 
 
-.accueilMoi-fond2{
+.accueilMoi-fond2 {
     display: block;
     background-color: var(--vert);
-    width: 90%;
+    width: 100%;
     height: 250px;
 
     position: absolute;
-    bottom: -5.2em;
+    bottom: -0em;
     right: 0;
     z-index: -1;
 }
@@ -141,36 +192,36 @@
 /* BARRES - BAS */
 
 .accueilMoi-barres2Verti::before,
-.accueilMoi-barres2Verti::after{
+.accueilMoi-barres2Verti::after {
     content: "";
     display: block;
     width: 0.5em;
     height: 40%;
     background-color: var(--noir);
     position: absolute;
-    bottom: -5.2em;
+    bottom: -1em;
     right: 0.5em;
     z-index: 2;
 }
 
-.accueilMoi-barres2Verti::after{
+.accueilMoi-barres2Verti::after {
     right: 1.4em;
 }
 
 .accueilMoi-barres2Hori::before,
-.accueilMoi-barres2Hori::after{
+.accueilMoi-barres2Hori::after {
     content: "";
     display: block;
     height: 0.5em;
     width: 70%;
     background-color: var(--noir);
     position: absolute;
-    bottom: -3.7em;
+    bottom: 0.5em;
     right: 0;
     border-right-color: 0;
     z-index: 2;
 }
 
-.accueilMoi-barres2Hori::after{
-    bottom: -2.8em;
+.accueilMoi-barres2Hori::after {
+    bottom: 1.4em;
 }

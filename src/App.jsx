@@ -1,6 +1,9 @@
 import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import LesProjets from "./Pages/LesProjets";
-import UnProjet from "./Pages/UnProjet";
+import Bucheron from "./Pages/Bucheron";
+import Musee from "./Pages/Musee";
+import Agrotourisme from "./Pages/Agrotourisme";
+import Groovy from "./Pages/Groovy";
 import Contact from "./Pages/Contact";
 import QuiEstMP from "./Pages/QuiEstMP";
 import Accueil from "./Pages/Accueil";
@@ -23,13 +26,23 @@ const App = () => {
         },
         {
           path: "projets",
-          element: <LesProjets />,
-          children: [
-            {
-              path: "projets/:id",
-              element: <UnProjet />
-            }
-          ]
+          element: <LesProjets />
+        },
+        {
+          path: "bucheron-boreal",
+          element: <Bucheron />
+        },
+        {
+          path: "essence-divine",
+          element: <Musee />
+        },
+        {
+          path: "agrotourisme-laurentides",
+          element: <Agrotourisme />
+        },
+        {
+          path: "groovy-beats",
+          element: <Groovy />
         },
         {
           path: "contact",

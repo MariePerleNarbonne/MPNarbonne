@@ -1,0 +1,80 @@
+.buchImg-container{
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(7, auto);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+    }
+    @media screen and (min-width: 998px) {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(6, auto);
+    }
+
+}
+.buchui-imgContainer{
+    display: grid;
+}
+
+.buchui-imgContainer:has(.buchImg-img-Acc){
+    @media screen and (min-width: 768px) {
+        grid-area: 2 / 1 / 4 / 2;
+        margin-top: -30em;
+    }
+    @media screen and (min-width: 98px) {
+        grid-area: 3 / 1 / 5 / 2;
+        margin-top: -10em;
+    }
+}
+.buchui-imgContainer:has(.buchImg-img-Menu){
+    @media screen and (min-width: 768px) {
+        grid-area: 1 / 2 / 3 / 3;   
+    }
+    @media screen and (min-width: 998px) {
+        grid-area: 2 / 2 / 4 / 3;
+        magin-top: 10em;
+    }
+}
+.buchui-imgContainer:has(.buchImg-img-Det){
+    @media screen and (min-width: 768px) {
+        margin-top: -12em;
+        grid-area: 3 / 2 / 5 / 3;
+    }
+    @media screen and (min-width: 998px) {
+        margin-top: -6em;
+        grid-area: 1 / 3 / 4 / 4;
+    }
+}
+.buchui-imgContainer:has(.buchImg-img-Con){
+    @media screen and (min-width: 768px) {
+        /* margin-top: -15em; */
+        grid-area: 4 / 1 / 6 / 2;
+    }
+    @media screen and (min-width: 998px) {
+        grid-area: 5 / 3 / 7 / 4;
+    }
+}
+.buchui-imgContainer:has(.buchImg-img-Fac){
+    @media screen and (min-width: 768px) {
+        margin-top: -8em;
+        grid-area: 5 / 2 / 7 / 3;
+    }
+    @media screen and (min-width: 998px) {
+        margin-top: -35em;
+        grid-area: 4 / 2 / 6 / 3;
+    }
+}
+.buchui-imgContainer:has(.buchImg-img-NB){
+    @media screen and (min-width: 768px) {
+        margin-top: -19em;
+        grid-area: 6 / 1 / 8 / 2;
+    }
+    @media screen and (min-width: 998px) {
+        margin-top: -28em;
+        grid-area: 4 / 3 / 5 / 4;
+    }
+}
+
+.BucheronPage .finale-container{
+    margin-top: -15em;
+}

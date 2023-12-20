@@ -1,0 +1,68 @@
+.finale-container{
+    background-color: var(--vert);
+    width: 100%;
+    padding: 2em 1em;
+    text-transform: uppercase;
+    font-family: var(--texte);
+    line-height: 1.4em;
+}
+
+.finale-titre{
+    font-size: 2em;
+    color: var(--noir);
+    margin: 1.5em 0;
+
+}
+
+.finale-lien{
+    color: var(--noir);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s;
+    @media screen and (min-width: 430px) {
+        font-size: 1.5em;
+
+    }
+}
+
+.finale-lien svg {
+    margin-bottom: -0.8em;
+    margin-left: 0em;
+    transition: all 0.2s;
+
+    @media screen and (min-width: 510px) {
+        margin-bottom: -0.6em;
+    }
+
+    @media screen and (min-width: 998px) {
+        margin-bottom: -0.4em;
+    }
+}
+
+.finale-lien:hover svg {
+    margin-left: 0.8em;
+    transition: all 0.2s;
+}
+
+.finale-lien:hover {
+    color: var(--mauve);
+    transition: all 0.3s;
+}
+
+.finale-barres::after,
+.finale-barres::before{
+    content: "";
+    display: block;
+    height: 0.5em;
+    width: 80%;
+    background-color: var(--noir);
+    margin-top: 0.5em;
+    margin-left: -1em;
+    
+    z-index: 2;
+    
+    @media screen and (min-width: 998px) {
+        width: 65%;
+    }
+}

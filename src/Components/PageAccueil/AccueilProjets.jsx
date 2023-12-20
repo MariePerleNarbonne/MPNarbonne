@@ -8,7 +8,7 @@ const AccueilProjets = () => {
       <div className="accueilProjets-btnWrap">
         <span className="accueilProjets-barres"></span>
         <div className="wraptext-btn">
-          <Link className="accueilProjets-btn">
+          <Link to={"/projets"} className="accueilProjets-btn">
             Voir les projets 
             <HiArrowLongRight size="45"/>
           </Link>

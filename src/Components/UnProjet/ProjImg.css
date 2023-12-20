@@ -1,0 +1,15 @@
+.buchImg-img{
+    background-color: var(--mauve);
+}
+
+.img-container{
+    width: 100%;
+    min-height: 50vh;
+}
+
+.ProjImg{
+    width: 100%;
+    min-height: 50vh;
+    object-fit: cover;
+    object-position: center;
+}

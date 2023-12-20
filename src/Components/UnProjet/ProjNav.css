@@ -1,0 +1,53 @@
+.projNav{
+    padding: 1.5em 0;
+    overflow: hidden;
+
+    font-family: var(--texte);
+    font-size: 1.5em;
+    text-transform: uppercase;
+
+    background-color: var(--noir);
+}
+
+.demandes{
+    width: 100%;
+    white-space: nowrap;
+    color: var(--vert);
+    animation: aDroiteTous 7s linear infinite;
+    display: inline-block;
+  }
+  
+  .demandes-span{
+    color: var(--mauve);
+    display: inline-block;
+  }
+  
+  .finale{
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    color: var(--mauve);
+    animation: aGaucheTous 7s linear infinite;
+  }
+  
+  .finale-span{
+    color: var(--vert);
+    display: inline-block;
+  }
+
+@keyframes aDroiteTous {
+    0% {
+      transform: translate(-100%, 0);
+    }
+    100% {
+      transform: translate(100%, 0);
+    }
+}
+@keyframes aGaucheTous {
+    0% {
+      transform: translate(100%, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+}
