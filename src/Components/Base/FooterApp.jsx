@@ -79,11 +79,11 @@ const FooterApp = () => {
         <p className="footer-carriere">Designer / Développeuse Web Front End</p>
       </div>
       <div className="footer-lien">
-        <Link className='footer-cv' onClick={handleDownload}>CV</Link>
         <Link to={"/"}>Accueil</Link>
         <Link to={"/bio"}>Qui est MP ?</Link>
         <Link to={"/projets"}>Projets</Link>
         <Link to={"/contact"}>Contact</Link>
+        <Link className='footer-cv' onClick={handleDownload}>CV</Link>
       </div>
       <div className="footer-socials">
         <Link to="https://www.linkedin.com/in/mp-narbonne/"><GrLinkedin size={sizeLinked} /></Link>

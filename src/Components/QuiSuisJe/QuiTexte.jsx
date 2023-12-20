@@ -21,6 +21,13 @@ const QuiTexte = () => {
           <span className="quiTexte-barres barres3"></span>
           <div className="imgMoi2">{width>= 768? "" : <img className="quiTexte-img img-moi2" src="/imgs/moi.jpg" alt="" />}</div>
           <p className="quiTexte-p p3">Passionnée par la diversité culturelle, je m'efforce de marier l'esthétique et la fonctionnalité dans chacun de mes projets. Avec une tasse de café à la main et une curiosité infinie, je suis prête à transformer vos idées en expériences visuelles et interactives mémorables.</p>
+          <p className="quiTexte-p p5">Mes compétences incluent: </p>
+          <p className="quiTexte-p p4">- La création d'identité corporative:</p>
+          <p className="quiTexte-p p4">• Développer une stratégie de marque <br/> • Concevoir des logos, des palettes de couleur <br/> • Appliquer de manière cohérente l'identité corporative</p>
+          <p className="quiTexte-p p4">- Exploiter les langages de programmation utilisés en multimédia :</p>
+          <p className="quiTexte-p p4">• Maîtriser les langages front end<br/> • Utiliser des des frameworks comme React ou Vue.js<br/> • Collaborer avec des développeurs back end pour intégrer le front end avec les bases de données</p>
+          <p className="quiTexte-p p4">- Adapter l’interactivité des pages-écrans :</p>
+          <p className="quiTexte-p p4 p4-last">• Concevoir des interfaces utilisateur conviviales<br/> • Utiliser des événements JavaScript pour ajouter des  fonctionnalités interactives<br/> • Effectuer des tests d'utilisabilité </p>
           <div className="quiTexte-imgBottom">
             <img className="quiTexte-img img-moi3" src="/imgs/moi.jpg" alt="" />
             {width>= 768? <img className="quiTexte-img img-moi4" src="/imgs/moi.jpg" alt="" /> : ""}

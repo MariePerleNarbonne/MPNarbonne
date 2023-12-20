@@ -55,6 +55,28 @@
     }
 }
 
+.p4{
+    margin: 1em;
+    width: 75%;
+}
+
+.p4-last{
+    padding-bottom: 2em;
+}
+.p5{
+    margin: 1em;
+    font-size: 22px;
+    font-weight: 800;
+    @media screen and (min-width: 650px) {
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: 998px) {
+        font-size: 29px;
+    }
+
+}
+
 
 .quiTexte-img {
     width: 68%;
