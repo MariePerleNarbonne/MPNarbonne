@@ -65,7 +65,7 @@ const FooterApp = () => {
   const sizePin = width >= 998 ? "55" : "45";
 
   const handleDownload = () => {
-    const pdfUrl = '/public/MP-Narbonne_CV.pdf';
+    const pdfUrl = '/MP-Narbonne_CV.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = 'MP-Narbonne_CV.pdf';
