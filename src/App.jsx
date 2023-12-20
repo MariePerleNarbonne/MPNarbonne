@@ -1,26 +1,23 @@
 import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import LesProjets from "./Pages/LesProjets";
-import UnProjet from "./Pages/UnProjet";
+import Bucheron from "./Pages/Bucheron";
+import Musee from "./Pages/Musee";
+import Agrotourisme from "./Pages/Agrotourisme";
+import Groovy from "./Pages/Groovy";
 import Contact from "./Pages/Contact";
 import QuiEstMP from "./Pages/QuiEstMP";
 import Accueil from "./Pages/Accueil";
 import Layout from "./Components/Layout";
 
-
 const App = () => {
-  //Création des routes pour naviguer dans le site.
-  //Pour chaque route, on crée un objet. ({path, element})
   const routes = [
     {
-      path: "",
+      path: "/",
       element: <Layout />,
       children: [
         {
-          index: true, //Affiche la composante par défaut dans le Outlet.
-          element: <Navigate to={"/"} replace />
-        },
-        {
           path: "/",
+          index: true,
           element: <Accueil />
         },
         {
@@ -29,13 +26,23 @@ const App = () => {
         },
         {
           path: "projets",
-          element: <LesProjets />,
-          children: [
-            {
-              path: "projets/:id",
-              element: <UnProjet />
-            }
-          ]
+          element: <LesProjets />
+        },
+        {
+          path: "bucheron-boreal",
+          element: <Bucheron />
+        },
+        {
+          path: "essence-divine",
+          element: <Musee />
+        },
+        {
+          path: "agrotourisme-laurentides",
+          element: <Agrotourisme />
+        },
+        {
+          path: "groovy-beats",
+          element: <Groovy />
         },
         {
           path: "contact",
@@ -45,12 +52,10 @@ const App = () => {
     },
     {
       path: "*",
-      //si on écrit quelque chose qui n'exsiste pas, renvoyé à about.
-      //replace permet de ne pas garder en historique les routes érronées
       element: <Navigate to="/" replace />
-    }];
+    }
+  ];
 
-  //On retourne le routerProvider pour changer de route en route
   return <RouterProvider router={createBrowserRouter(routes)} />;
 };
 
