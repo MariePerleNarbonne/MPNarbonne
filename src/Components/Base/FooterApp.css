@@ -62,6 +62,19 @@
     font-size: 1em;
 }
 
+.footerApp .footer-cv{
+    font-family: var(--texte);
+    font-size: 1.7em;
+    color: var(--blanc);
+    margin: 0.5em;
+    transition: all 0.25s;
+}
+.footerApp .footer-cv:hover{
+    color: var(--mauve);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
 .footerApp .footer-lien{
     display: flex;
     justify-content: center;

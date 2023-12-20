@@ -56,9 +56,6 @@ const ContactMerci = () => {
           <p className='pinterest merci-i'><Link to="https://dribbble.com/MP-Narbonne"><FaPinterest size={width >= 750 ? "70" : "60"}/></Link></p>     
         </div>
       </div>
-      <div className="merci-signature">
-        <p>MP</p>
-      </div>
     </section>
   );
 };
