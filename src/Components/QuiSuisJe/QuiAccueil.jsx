@@ -91,7 +91,6 @@ const QuiAccueil = () => {
   }, []);
 
     const handleDownload = () => {
-      // Logique de téléchargement du fichier PDF
       const pdfUrl = '/public/MP-Narbonne_CV.pdf';
       const link = document.createElement('a');
       link.href = pdfUrl;
@@ -122,7 +121,7 @@ const QuiAccueil = () => {
       <div className="quiAccueil-socials">
         <p className='linkedin merci-i'><Link to="https://www.linkedin.com/in/mp-narbonne/"><FaLinkedinIn size={width >= 750 ? "50" : "40"}/></Link></p>
         <p className='dribbble merci-i'><Link to="https://dribbble.com/MP-Narbonne"><FaDribbble size={width >= 750 ? "70" : "60"}/></Link></p>
-        <p className='pinterest merci-i'><Link to="https://dribbble.com/MP-Narbonne"><FaPinterest size={width >= 750 ? "70" : "60"}/></Link></p>
+        <p className='pinterest merci-i'><Link to="https://www.pinterest.ca/mpnarbonne"><FaPinterest size={width >= 750 ? "70" : "60"}/></Link></p>
       </div>
       <div className="quiAccueil-cv-container">
         <Link className="quiAccueil-cv" onClick={handleDownload}>cv</Link>

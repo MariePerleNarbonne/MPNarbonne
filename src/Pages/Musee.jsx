@@ -1,3 +1,5 @@
+import './Musee.css';
+
 import ProjImg from "../Components/UnProjet/ProjImg";
 import ProjNav from "../Components/UnProjet/ProjNav";
 import Demandes from "../Components/UnProjet/Demandes";
@@ -37,15 +39,15 @@ const Musee = () => {
         <ProjImg classe="buchImg-containerHeader" classeImg="buchImg-img" srcImg="imgs/musee/Desktop_PresOeuvres.png"/>
         <Demandes demandes={demandesData} contentClient={contentClient} />
         <ProjTech icones={technologiesUtilisees}/>
-        <div className="buchImg-container">
-          <ProjImg classe="buchui-imgContainer" classeImg="buchImg-img-Acc" srcImg="imgs/bucheron/Accueil.png"/>
-          <ProjImg classe="buchui-imgContainer" classeImg="buchImg-img-Menu" srcImg="imgs/bucheron/Menu.png"/>
-          <ProjImg classe="buchui-imgContainer" classeImg="buchImg-img-Det" srcImg="imgs/bucheron/Details.png"/>
-          <ProjImg classe="buchui-imgContainer" classeImg="buchImg-img-Con" srcImg="imgs/bucheron/Connexion.png"/>
-          <ProjImg classe="buchui-imgContainer" classeImg="buchImg-img-Fac" srcImg="imgs/bucheron/Facture.png"/>
-          <ProjImg classe="buchui-imgContainer" classeImg="buchImg-img-NB" srcImg="imgs/bucheron/Numero.png"/>
+        <div className="museeImg-container">
+          <ProjImg classe="buchui-imgContainer" classeImg="museeImg Acc" srcImg="imgs/musee/Desktop_PresOeuvres.png"/>
+          <ProjImg classe="buchui-imgContainer" classeImg="museeImg Menu" srcImg="imgs/musee/Desktop_UneOeuvre.png"/>
+          <ProjImg classe="buchui-imgContainer" classeImg="museeImg Det" srcImg="imgs/musee/Desktop_UneOeuvre_ImgOuverte.png"/>
+          <ProjImg classe="buchui-imgContainer" classeImg="museeImg Con" srcImg="imgs/musee/Mobile_PresOeuvres.png"/>
+          <ProjImg classe="buchui-imgContainer" classeImg="museeImg NB" srcImg="imgs/musee/Mobile_UneOeuvre.png"/>
+          <ProjImg classe="buchui-imgContainer" classeImg="museeImg Fac" srcImg="imgs/musee/Mobile_UneOeuvre_ImgOuverte.png"/>
         </div>
-          <Finale lien={"/bucheron-boreal"} nomLien="Essence Divine"/>
+          <Finale lien={"/essence-divine"} nomLien="Essence Divine"/>
       </section>
     )
   };

@@ -64,6 +64,14 @@ const FooterApp = () => {
   const sizeDrib = width >= 998 ? "62" : "52";
   const sizePin = width >= 998 ? "55" : "45";
 
+  const handleDownload = () => {
+    const pdfUrl = '/public/MP-Narbonne_CV.pdf';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'MP-Narbonne_CV.pdf';
+    link.click();
+  };
+
   return (
     <footer className="footerApp">
       <div className="footer-titre">
@@ -71,15 +79,16 @@ const FooterApp = () => {
         <p className="footer-carriere">Designer / Développeuse Web Front End</p>
       </div>
       <div className="footer-lien">
-        <Link>Accueil</Link>
-        <Link>Qui est MP ?</Link>
-        <Link>Projets</Link>
-        <Link>Contact</Link>
+        <Link className='footer-cv' onClick={handleDownload}>CV</Link>
+        <Link to={"/"}>Accueil</Link>
+        <Link to={"/bio"}>Qui est MP ?</Link>
+        <Link to={"/projets"}>Projets</Link>
+        <Link to={"/contact"}>Contact</Link>
       </div>
       <div className="footer-socials">
         <Link to="https://www.linkedin.com/in/mp-narbonne/"><GrLinkedin size={sizeLinked} /></Link>
         <Link to="https://dribbble.com/MP-Narbonne"><AiOutlineDribbbleSquare size={sizeDrib} /></Link>
-        <Link to="https://dribbble.com/MP-Narbonne"><FaPinterestSquare size={sizePin} /></Link>
+        <Link to="https://www.pinterest.ca/mpnarbonne"><FaPinterestSquare size={sizePin} /></Link>
       </div>
     </footer>
   );
